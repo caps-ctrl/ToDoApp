@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# 📝 To Do App – Frontend React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To Do App to aplikacja typu SPA stworzona w **React + TypeScript**, w której użytkownicy mogą zarządzać listą zadań.  
+Globalny stan aplikacji jest zarządzany za pomocą **Redux Toolkit**, a interfejs wykorzystuje komponenty z **shadcn/ui**.  
 
-Currently, two official plugins are available:
+🔗 **Live demo:** [To Do App](https://to-do-9b2rdn60i-marcels-projects-c19c1f57.vercel.app/)  
+📂 **Repozytorium:** [GitHub](https://github.com/caps-ctrl/ToDoApp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funkcje
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ **Zarządzanie zadaniami** – dodawanie, usuwanie i oznaczanie zadań jako wykonane  
+- 🖥️ **Responsywność** – działa poprawnie na urządzeniach mobilnych i desktopowych  
+- 🎨 **TailwindCSS** – spójny design i szybkie stylowanie  
+- 🧩 **shadcn/ui** – gotowe komponenty UI  
+- 🛠️ **Redux Toolkit** – globalny stan aplikacji  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technologie
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| 🛠️ Technologia       | Opis                                      | 
+| 🔲-------------------|-------------------------------------------|
+| ⚛️ React             | Komponenty funkcyjne, SPA                 |
+| 🔷 TypeScript        | Typowanie i bezpieczeństwo kodu           |
+| 🛠️ Redux Toolkit     | Globalny stan aplikacji                   |
+| 🎨 TailwindCSS       | Stylowanie i responsywność                |
+| 🧩 shadcn/ui         | Komponenty UI                             |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📝 TODO / Plany rozwoju
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Zrobienie paginacji zadań  
+- Naprawa błędu z zaznaczeniem wybranej pozycji (fix selected row bug)  
+- Pisanie testów jednostkowych i E2E  
+
+---
+
+## 🔧 Instalacja
+
+Aby uruchomić projekt lokalnie:
+
+```bash
+git clone https://github.com/caps-ctrl/ToDoApp.git
+cd ToDoApp
+npm install
+npm run dev
